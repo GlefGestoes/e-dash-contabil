@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRE Anual</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <div class="tab-content" id="dre-anual">
+        <div class="sub-section">
+            <h3>DRE Anual</h3>
+            <div class="spreadsheet-container">
+                <table class="financial-table">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Notas</th>
+                            <th class="current-year" id="drAnoIrfs-b2"></th>
+                            <th class="previous-year" id="drAnoIrfs-d2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas da DRE -->
+                        <!-- Exemplo inicial: apenas estrutura; os valores virão do JS -->
+                        <tr>
+                            <td>Receita líquida</td>
+                            <td>3</td>
+                            <td id="drAnoIrfs-b3"></td>
+                            <td id="drAnoIrfs-d3"></td>
+                        </tr>
+                        <tr>
+                            <td>(+) Outras receitas</td>
+                            <td>4</td>
+                            <td id="drAnoIrfs-b4"></td>
+                            <td id="drAnoIrfs-d4"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Matérias primas e materiais</td>
+                            <td>5</td>
+                            <td id="drAnoIrfs-b5"></td>
+                            <td id="drAnoIrfs-d5"></td>
+                        </tr>
+                        <tr>
+                            <td>(+) Variação dos estoques</td>
+                            <td>6</td>
+                            <td id="drAnoIrfs-b6"></td>
+                            <td id="drAnoIrfs-d6"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Despesas com salários e benefícios</td>
+                            <td>7</td>
+                            <td id="drAnoIrfs-b7"></td>
+                            <td id="drAnoIrfs-d7"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Despesas de depreciação</td>
+                            <td>8</td>
+                            <td id="drAnoIrfs-b8"></td>
+                            <td id="drAnoIrfs-d8"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Despesas de amortização</td>
+                            <td>9</td>
+                            <td id="drAnoIrfs-b9"></td>
+                            <td id="drAnoIrfs-d9"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Despesas com pesquisa</td>
+                            <td>10</td>
+                            <td id="drAnoIrfs-b10"></td>
+                            <td id="drAnoIrfs-d10"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Despesas com marketing</td>
+                            <td>11</td>
+                            <td id="drAnoIrfs-b11"></td>
+                            <td id="drAnoIrfs-d11"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Perdas com impairment</td>
+                            <td>12</td>
+                            <td id="drAnoIrfs-b12"></td>
+                            <td id="drAnoIrfs-d12"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Outras despesas</td>
+                            <td>13</td>
+                            <td id="drAnoIrfs-b13"></td>
+                            <td id="drAnoIrfs-d13"></td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td>(=) LUCRO OPERACIONAL</td>
+                            <td>14</td>
+                            <td id="drAnoIrfs-b14"></td>
+                            <td id="drAnoIrfs-d14"></td>
+                        </tr>
+                        <!-- Continue as linhas até b29/d29 conforme sua estrutura -->
+                        <tr>
+                            <td>(+/-) REP de coligadas e controladas</td>
+                            <td>15</td>
+                            <td id="drAnoIrfs-b15"></td>
+                            <td id="drAnoIrfs-d15"></td>
+                        </tr>
+                        <tr>
+                            <td>(+/-) REP de Joint Ventures</td>
+                            <td>16</td>
+                            <td id="drAnoIrfs-b16"></td>
+                            <td id="drAnoIrfs-d16"></td>
+                        </tr>
+                        <tr>
+                            <td>(+/-) Receita/despesas financeiras de ativos financeiros</td>
+                            <td>17</td>
+                            <td id="drAnoIrfs-b17"></td>
+                            <td id="drAnoIrfs-d17"></td>
+                        </tr>
+                        <tr>
+                            <td>(+/-) Receita/despesas financeiras de caixa e equivalentes</td>
+                            <td>18</td>
+                            <td id="drAnoIrfs-b18"></td>
+                            <td id="drAnoIrfs-d18"></td>
+                        </tr>
+                        <tr>
+                            <td>(+) Receita de dividendos</td>
+                            <td>19</td>
+                            <td id="drAnoIrfs-b19"></td>
+                            <td id="drAnoIrfs-d19"></td>
+                        </tr>
+                        <tr>
+                            <td>(+/-) Variação no valor justo de ativos financeiros</td>
+                            <td>20</td>
+                            <td id="drAnoIrfs-b20"></td>
+                            <td id="drAnoIrfs-d20"></td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td>(=) LUCRO ANTES DE FINANCIAMENTOS E IMPOSTOS</td>
+                            <td>21</td>
+                            <td id="drAnoIrfs-b21"></td>
+                            <td id="drAnoIrfs-d21"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Despesas de juros de financiamentos</td>
+                            <td>22</td>
+                            <td id="drAnoIrfs-b22"></td>
+                            <td id="drAnoIrfs-d22"></td>
+                        </tr>
+                        <tr>
+                            <td>(+/-) Variação cambial de financiamentos</td>
+                            <td>23</td>
+                            <td id="drAnoIrfs-b23"></td>
+                            <td id="drAnoIrfs-d23"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) Provisões</td>
+                            <td>24</td>
+                            <td id="drAnoIrfs-b24"></td>
+                            <td id="drAnoIrfs-d24"></td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td>(=) LUCRO ANTES DOS IMPOSTOS</td>
+                            <td>25</td>
+                            <td id="drAnoIrfs-b25"></td>
+                            <td id="drAnoIrfs-d25"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) CSLL - 9%</td>
+                            <td>26</td>
+                            <td id="drAnoIrfs-b26"></td>
+                            <td id="drAnoIrfs-d26"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) IRPJ - 15%</td>
+                            <td>27</td>
+                            <td id="drAnoIrfs-b27"></td>
+                            <td id="drAnoIrfs-d27"></td>
+                        </tr>
+                        <tr>
+                            <td>(-) IRPJ - 10%</td>
+                            <td>28</td>
+                            <td id="drAnoIrfs-b28"></td>
+                            <td id="drAnoIrfs-d28"></td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td>(=) LUCRO LÍQUIDO</td>
+                            <td>29</td>
+                            <td id="drAnoIrfs-b29"></td>
+                            <td id="drAnoIrfs-d29"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="dash.js"></script>
+</body>
+</html>
