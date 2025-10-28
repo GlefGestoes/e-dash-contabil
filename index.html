@@ -7,6 +7,212 @@
     <link rel="stylesheet" href="dash.css">
 </head>
 <body>
+    <div class="tab-content" id="balanco-anual">
+        <div class="sub-section">
+            <h3>Balanço Anual</h3>
+                <div class="spreadsheet-container">
+                    <table class="financial-table">
+                        <thead>
+                            <tr>
+                                <th>Ativo</th>
+                                    <th>Notas</th>
+                                    <th class="current-year" id="bpAno-b2"></th>
+                                    <th class="previous-year" id="bpAno-d2"></th>
+                                    <th>Passivo</th>
+                                    <th>Notas</th>
+                                    <th class="current-year" id="bpAno-g2"></th>
+                                    <th class="previous-year" id="bpAno-i2"></th>
+                                </tr>
+                            </thead>
+                            <thead>
+                                <tr class="highlight-row">
+                                    <th>Ativo Circulante</th>
+                                    <th>3</th>
+                                        <td id="bpAno-b3"></td>
+                                        <td id="bpAno-d3"></td>
+                                        <th>Passivo Circulante</th>
+                                        <th>3</th>
+                                        <td id="bpAno-g3"></td>
+                                        <td id="bpAno-i3"></td>
+                                    </tr>
+                                </thead>
+                                <tbody id="balance-sheet-data">
+                                 <tr>
+                                   <td>Caixa e Equivalentes de Caixa</td>
+                                   <td>4</td>
+                                   <td id="bpAno-b4"></td>
+                                   <td id="bpAno-d4"></td>
+                                   <td>Fornecedores</td>
+                                   <td>4</td>
+                                   <td id="bpAno-g4"></td>
+                                   <td id="bpAno-i4"></td>
+                                 </tr>
+                                 <tr>
+                                  <td>Créditos a receber</td>
+                                  <td>9</td>
+                                  <td id="bpAno-b9"></td>
+                                  <td id="bpAno-d9"></td>
+                                  <td>Obrigações fiscais e sociais</td>
+                                  <td>7</td>
+                                  <td id="bpAno-g7"></td>
+                                  <td id="bpAno-i7"></td>
+                                 </tr>
+                                 <tr>
+                                 <td>Estoques</td>
+                                  <td>12</td>
+                                  <td id="bpAno-b12"></td>
+                                  <td id="bpAno-d12"></td>
+                                  <td>Empréstimos e financiamentos</td>
+                                  <td>11</td>
+                                  <td id="bpAno-g11"></td>
+                                  <td id="bpAno-i11"></td>
+                                </tr>
+                                <tr>
+                                <td>Créditos de adiantamentos</td>
+                                 <td>16</td>
+                                 <td id="bpAno-b16"></td>
+                                 <td id="bpAno-d16"></td>
+                                 <td>Parcelamentos</td>
+                                 <td>17</td>
+                                 <td id="bpAno-g17"></td>
+                                 <td id="bpAno-i17"></td>
+                               </tr>
+                               <tr>
+                                 <td>Créditos a recuperar</td>
+                                 <td>21</td>
+                                 <td id="bpAno-b21"></td>
+                                 <td id="bpAno-d21"></td>
+                                 <td>Outras contas a pagar</td>
+                                 <td>20</td>
+                                 <td id="bpAno-g20"></td>
+                                 <td id="bpAno-i20"></td>
+                               </tr>
+                               <tr>
+                                 <td>Despesas do exercício seguinte</td>
+                                 <td>24</td>
+                                 <td id="bpAno-b24"></td>
+                                 <td id="bpAno-d24"></td>
+                                 <td>Provisões</td>
+                                 <td>28</td>
+                                 <td id="bpAno-g28"></td>
+                                 <td id="bpAno-i28"></td>
+                              </tr>
+                                <tr class="highlight-row">
+                                <th>Ativo não circulante</th>
+                                <th>30</th>
+                                <td id="bpAno-b30"></td>
+                                <td id="bpAno-d30"></td>
+                                <th>Passivo não circulante</th>
+                                <th>32</th>
+                                <td id="bpAno-g32"></td>
+                                <td id="bpAno-i32"></td>
+                               </tr>
+                               <tr>
+                                <td>Realizável a longo prazo (RLP)</td>
+                                <td>31</td>
+                                <td id="bpAno-b31"></td>
+                                <td id="bpAno-d31"></td>
+                                <td>Passivo exigível a longo prazo</td>
+                                <td>33</td>
+                                <td id="bpAno-g33"></td>
+                                <td id="bpAno-i33"></td>
+                              </tr>
+                                <!-- ERRO 4: Linha abaixo corrigida (<td> fechado, </tr> movido) -->
+                              <tr>
+                               <td>Investimentos</td>
+                               <td>35</td>
+                               <td id="bpAno-b35"></td>
+                                <td id="bpAno-d35"></td>
+                                <td>Empréstimos e financiamentos</td>
+                                <td>34</td>
+                                <td id="bpAno-g34"></td>
+                                <td id="bpAno-i34"></td>
+                              </tr>
+                              <tr>
+                                <td>Imobilizado líquido</td>
+                                <td>38</td>
+                                <td id="bpAno-b38"></td>
+                                <td id="bpAno-d38"></td>
+                                <td>Parcelamentos tributários</td>
+                                <td>36</td>
+                                <td id="bpAno-g36"></td>
+                                <td id="bpAno-i36"></td>
+                             </tr>
+                             <tr>
+                                <td>Contas de compensação</td>
+                                <td>43</td>
+                                <td id="bpAno-b43"></td>
+                                <td id="bpAno-d43"></td>
+                                <td>Alugueis a pagar</td>
+                                <td>37</td>
+                                <td id="bpAno-g37"></td>
+                                <td id="bpAno-i37"></td>
+                             </tr>
+                             <tr>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td>Receitas diferidas</td>
+                               <td>38</td>
+                               <td id="bpAno-g38"></td>
+                               <td id="bpAno-i38"></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td>Contas de compensação</td>
+                               <td>40</td>
+                               <td id="bpAno-g40"></td>
+                               <td id="bpAno-i40"></td>
+                            </tr>
+                              <tr class="highlight-row">
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th>Patrimônio Líquido</th>
+                              <th></th>
+                              <td></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                             <td></td>
+                             <td></td>
+                             <td></td>
+                             <td></td>
+                             <td>Capital social</td>
+                             <td>46</td>
+                             <td id="bpAno-g46"></td>
+                             <td id="bpAno-i46"></td>
+                          </tr>
+                          <tr>
+                             <td></td>
+                             <td></td>
+                             <td></td>
+                             <td></td>
+                             <td>Lucro/Prejuízos</td>
+                             <td>47</td>
+                             <td id="bpAno-g47"></td>
+                             <td id="bpAno-i47"></td>
+                        </tr>
+                   </tbody>
+                     <tfoot>
+                        <tr class="total-row">
+                             <td colspan="2">Total do Ativo</td>
+                             <td class="highlight-row" id="bpAno-b53"></td>
+                             <td class="highlight-row" id="bpAno-d53"></td>
+                             <td colspan="2">Total do Passivo e PL</td>
+                             <td class="highlight-row" id="bpAno-g53"></td>
+                             <td class="highlight-row" id="bpAno-i53"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+     </div
     <div class="tab-content" id="dre-anual">
         <div class="sub-section">
             <h3>DRE Anual</h3>
@@ -191,7 +397,8 @@
             </div>
         </div>
     </div>
-
+    <script src="dashbp.js"></script>
     <script src="dash.js"></script>
 </body>
 </html>
+
