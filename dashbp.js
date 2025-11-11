@@ -22,10 +22,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     function populateBalanceSheet(rows) {
-        for (let i = 2; i <= 16; i++) {
-            const rowIndex = i - 2; // Ajuste zero-based
+        for (let i = 2; i <= 15; i++) { // Linhas 2 a 15 do HTML
+            const rowIndex = i - 2; // zero-based index
             const row = rows[rowIndex];
-
             if (!row) continue;
 
             const cCell = row.c[2]?.v ?? '';
@@ -33,10 +32,10 @@ document.addEventListener('DOMContentLoaded', async function() {
             const gCell = row.c[6]?.v ?? '';
             const hCell = row.c[7]?.v ?? '';
 
-            const cEl = document.getElementById(`bpAnoIrfs-b${i}`);
+            const cEl = document.getElementById(`bpAnoIrfs-c${i}`);
             const dEl = document.getElementById(`bpAnoIrfs-d${i}`);
             const gEl = document.getElementById(`bpAnoIrfs-g${i}`);
-            const hEl = document.getElementById(`bpAnoIrfs-i${i}`);
+            const hEl = document.getElementById(`bpAnoIrfs-h${i}`);
 
             if (cEl) cEl.textContent = formatBR(cCell);
             if (dEl) dEl.textContent = formatBR(dCell);
@@ -54,5 +53,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     updateBalanceSheet();
     setInterval(updateBalanceSheet, 5 * 60 * 1000);
 });
+
 
 
