@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSnl7RGbaiQYRZaby0QBFoe34zFmungF9v3ZkPlg_8V5m9C23rSDkd_lYtW_L3GEuWJU19OyAUSSh27/gviz/tq?tqx=out:json&sheet=bpAno';
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSnl7RGbaiQYRZaby0QBFoe34zFmungF9v3ZkPlg_8V5m9C23rSDkd_lYtW_L3GEuWJU19OyAUSSh27/gviz/tq?tqx=out:json&sheet=bpAnoIrfs';
 
     async function fetchSheetData() {
         try {
@@ -22,26 +22,26 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     function populateBalanceSheet(rows) {
-        for (let i = 2; i <= 53; i++) {
+        for (let i = 2; i <= 16; i++) {
             const rowIndex = i - 2; // Ajuste zero-based
             const row = rows[rowIndex];
 
             if (!row) continue;
 
-            const bCell = row.c[1]?.v ?? '';
+            const cCell = row.c[2]?.v ?? '';
             const dCell = row.c[3]?.v ?? '';
             const gCell = row.c[6]?.v ?? '';
-            const iCell = row.c[8]?.v ?? '';
+            const hCell = row.c[7]?.v ?? '';
 
-            const bEl = document.getElementById(`bpAno-b${i}`);
-            const dEl = document.getElementById(`bpAno-d${i}`);
-            const gEl = document.getElementById(`bpAno-g${i}`);
-            const iEl = document.getElementById(`bpAno-i${i}`);
+            const cEl = document.getElementById(`bpAnoIrfs-b${i}`);
+            const dEl = document.getElementById(`bpAnoIrfs-d${i}`);
+            const gEl = document.getElementById(`bpAnoIrfs-g${i}`);
+            const hEl = document.getElementById(`bpAnoIrfs-i${i}`);
 
-            if (bEl) bEl.textContent = formatBR(bCell);
+            if (cEl) cEl.textContent = formatBR(cCell);
             if (dEl) dEl.textContent = formatBR(dCell);
             if (gEl) gEl.textContent = formatBR(gCell);
-            if (iEl) iEl.textContent = formatBR(iCell);
+            if (hEl) hEl.textContent = formatBR(hCell);
         }
     }
 
@@ -54,4 +54,5 @@ document.addEventListener('DOMContentLoaded', async function() {
     updateBalanceSheet();
     setInterval(updateBalanceSheet, 5 * 60 * 1000);
 });
+
 
